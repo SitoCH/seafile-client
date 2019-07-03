@@ -49,6 +49,7 @@ su - $UNAME << EO
     export SEAF_USERNAME=$SEAF_USERNAME
     export SEAF_PASSWORD=$SEAF_PASSWORD
     export SEAF_LIBRARY_UUID=$SEAF_LIBRARY_UUID
+    export SEAF_LIBRARY_PASSWORD=$SEAF_LIBRARY_PASSWORD
     export UNAME=$UNAME
     /bin/bash /home/seafuser/entrypoint.sh
 EO

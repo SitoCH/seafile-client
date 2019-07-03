@@ -32,4 +32,4 @@ while [ ! -f $seafile_ini ]; do sleep 1; done
 while [ ! -S $seafile_sock ]; do sleep 1; done
 
 # Start the synchronisation.
-/usr/bin/seaf-cli sync -u $SEAF_USERNAME -p $SEAF_PASSWORD -s $SEAF_SERVER_URL -l $SEAF_LIBRARY_UUID -d /volume
+/usr/bin/seaf-cli sync -u $SEAF_USERNAME -p $SEAF_PASSWORD -s $SEAF_SERVER_URL -l $SEAF_LIBRARY_UUID -d /volume -e $SEAF_LIBRARY_PASSWORD
