@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-FROM debian:jessie-slim
+FROM debian:stretch-slim
 
 # Prevent the packages installation to halt.
 ENV DEBIAN_FRONTEND noninteractive
@@ -29,7 +29,7 @@ COPY assets/cron/docker-entrypoint.sh /entrypoint.sh
 
 # Safely import Seafile APT key, then install both seafile-cli and supervisord.
 RUN mkdir -p /etc/apt/sources.list.d/ ;\
-    echo "deb http://deb.seadrive.org jessie main" \
+    echo "deb http://deb.seadrive.org stretch main" \
         > /etc/apt/sources.list.d/seafile.list ;\
     bash /import-seafile-apt-key.sh ;\
     apt-get update ;\
