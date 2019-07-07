@@ -51,9 +51,9 @@ RUN mkdir -p /etc/apt/sources.list.d/ ;\
             /var/cache/debconf/*.dat-old \
             /import-seafile-apt-key.sh ;\
     mkdir /volume/ ;\
-    echo "seafuser" > /etc/cron.allow ;\
-    echo "*/20 * * * * /bin/bash /home/seafuser/seafile-healthcheck.sh" \
-        > /var/spool/cron/crontabs/seafuser ;\
+    #echo "seafuser" > /etc/cron.allow ;\
+    #echo "*/20 * * * * /bin/bash /home/seafuser/seafile-healthcheck.sh" \
+    #    > /var/spool/cron/crontabs/seafuser ;\
     groupadd -g $GID -o $UNAME ;\
     useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
 
