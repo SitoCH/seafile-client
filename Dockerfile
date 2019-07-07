@@ -16,6 +16,9 @@
 
 FROM debian:stretch-slim
 
+RUN  apt-get update \
+     apt-get install gnupg
+
 # Prevent the packages installation to halt.
 ENV DEBIAN_FRONTEND noninteractive
 # Create the seafile client user.
