@@ -16,7 +16,7 @@
 
 FROM debian:stretch-slim
 
-RUN  apt-get update \
+RUN  apt-get update ;\
      apt-get install gnupg
 
 # Prevent the packages installation to halt.
