@@ -17,7 +17,7 @@
 FROM debian:stretch-slim
 
 RUN  apt-get update ;\
-     apt-get install gnupg
+     apt-get install gnupg -y
 
 # Prevent the packages installation to halt.
 ENV DEBIAN_FRONTEND noninteractive
